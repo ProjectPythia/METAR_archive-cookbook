@@ -42,6 +42,11 @@ authors:
     orcid: https://orcid.org/0000-0001-8155-8038
     website: https://github.com/kmpaul
     affiliation: NVIDIA
+  - family-names: Klucik
+    given-names: Rudy
+    orcid: https://orcid.org/0009-0008-5539-797X
+    website: https://github.com/oftfrfbf
+    affiliation: CIRES University of Colorado Boulder
   - name: "Cookbook Template contributors" # use the 'name' field to acknowledge organizations
     website: "https://github.com/ProjectPythia/cookbook-template/graphs/contributors"
   - family-names: Dong
@@ -49,5 +54,10 @@ authors:
     orcid: https://orcid.org/0009-0009-8335-558X
     website: https://github.com/alicexdong
     affiliation: Colorado State University
+  - family-names: Lober
+    given-names: Julia R.
+    orcid: https://orcid.org/0000-0003-3004-0583
+    website: https://github.com/julober
+    affiliation: Boise State University
 title: "Cookbook Template"
 abstract: "A sample cookbook description."
