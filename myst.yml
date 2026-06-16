@@ -3,11 +3,11 @@ version: 1
 extends:
   - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
-  title: Project Pythia Cookbook Template
-  github: https://github.com/projectpythia/cookbook-template
+  title: METAR Archive Cookbook
+  github: https://github.com/projectpythia/Metar_archive-cookbook
   authors:
     - name: The Project Pythia Community
-  copyright: '2024'
+  copyright: '2026'
   toc:
     - file: README.md
     - title: Preamble
@@ -16,11 +16,15 @@ project:
     - title: Introduction
       children:
         - file: notebooks/notebook-template.ipynb
+        - file: notebooks/0_Intro.ipynb
         - file: notebooks/primer.ipynb
     - title: Examples 
       children: 
+        - file: notebooks/2_Interactive_Viz.ipynb
         - file: notebooks/reanalysis_comparison.ipynb
+        - file: notebooks/3_AI_Assistant.ipynb
+        - file: notebooks/Temperature.ipynb
   jupyter:
       binder:
         url: https://binder.projectpythia.org
-        repo: projectpythia/cookbook-template
+        repo: projectpythia/Metar_archive-cookbook
