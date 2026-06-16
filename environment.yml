@@ -9,3 +9,8 @@ dependencies:
   - geopandas
   - metpy
   - lonboard
+  - intake
+  - intake-parquet
+  - intake-xarray
+  - s3fs
+  - pgeocode
