@@ -14,3 +14,11 @@ dependencies:
   - intake-xarray
   - s3fs
   - pgeocode
+  - pandas
+  - numpy
+  - hvplot
+  - holoviews
+  - shapely
+  - ipywidgets
+  - palettable
+  - sidecar
