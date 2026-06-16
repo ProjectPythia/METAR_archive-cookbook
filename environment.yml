@@ -2,6 +2,7 @@ name: METAR-archive-cookbook
 channels:
   - conda-forge
 dependencies:
+  - python>=3.14
   - jupyterlab
   - mystmd
   - jupyterlab-myst
