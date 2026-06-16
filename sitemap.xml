@@ -7,4 +7,7 @@
   <url>
     <loc>http://localhost:3000/notebooks/how-to-cite</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/reanalysis-comparison</loc>
+  </url>
 </urlset>
