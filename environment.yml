@@ -13,6 +13,7 @@ dependencies:
   - intake-parquet
   - intake-xarray
   - s3fs
+<<<<<<< HEAD
   - pgeocode
   - pandas
   - numpy
@@ -22,3 +23,6 @@ dependencies:
   - ipywidgets
   - palettable
   - sidecar
+=======
+  - pgeocode
+>>>>>>> 324a436 (rudy-dev adding boulder station plotting and lonboard visualization)
