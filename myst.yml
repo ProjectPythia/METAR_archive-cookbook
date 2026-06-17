@@ -20,6 +20,7 @@ project:
     - title: Examples 
       children: 
         - file: notebooks/2_Interactive_Viz.ipynb
+        - file: notebooks/Lonboard_Visualization.ipynb
         - file: notebooks/reanalysis_comparison.ipynb
         - file: notebooks/3_AI_Assistant.ipynb
         - file: notebooks/Temperature.ipynb
