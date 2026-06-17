@@ -27,4 +27,4 @@ dependencies:
   - ipywidgets
   - palettable
   - sidecar
-  - pygeo
+  - geopy
