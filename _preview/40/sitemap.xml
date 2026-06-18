@@ -20,6 +20,9 @@
     <loc>http://localhost:3000/notebooks/local-statistics</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/notebooks/temperature</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/notebooks/reanalysis-comparison</loc>
   </url>
   <url>
