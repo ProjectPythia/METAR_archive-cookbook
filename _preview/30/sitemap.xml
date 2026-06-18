@@ -23,6 +23,9 @@
     <loc>http://localhost:3000/notebooks/reanalysis-comparison</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/notebooks/dataset-restructuring</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/notebooks/ai-assistant</loc>
   </url>
 </urlset>
