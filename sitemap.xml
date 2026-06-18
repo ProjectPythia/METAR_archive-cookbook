@@ -11,6 +11,9 @@
     <loc>http://localhost:3000/notebooks/primer</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/notebooks/metpy-metar-map</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/notebooks/geopandas-visualization</loc>
   </url>
   <url>
@@ -18,6 +21,9 @@
   </url>
   <url>
     <loc>http://localhost:3000/notebooks/local-statistics</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/temperature</loc>
   </url>
   <url>
     <loc>http://localhost:3000/notebooks/reanalysis-comparison</loc>
