@@ -2,13 +2,20 @@
 version: 1
 extends:
   - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
+  - ./authors.yml
 project:
   plugins:
     - https://github.com/developmentseed/myst-anywidget-static-export/releases/latest/download/plugin.mjs
   title: METAR Archive Cookbook
   github: https://github.com/projectpythia/Metar_archive-cookbook
   authors:
-    - name: The Project Pythia Community
+    - xdong
+    - aespinoza
+    - rklucik
+    - jlober
+    - jnsingi
+    - msears
+    - ktyle
   copyright: '2026'
   toc:
     - file: README.md

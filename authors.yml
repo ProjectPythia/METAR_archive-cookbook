@@ -1,0 +1,39 @@
+version: 1
+project:
+  contributors:
+    - id: ktyle
+      name: Kevin Tyle
+      email: ktyle@albany.edu
+      orcid: 0000-0001-5249-9665
+      github: ktyle
+      affiliations: University at Albany (State University of New York)
+    - id: aespinoza
+      name: Ana V. Espinoza
+      orcid: 0000-0002-6292-073X
+      github: ana-v-espinoza
+      affiliations: UCAR | UCP | NSF Unidata
+    - id: rklucik
+      name: Rudy Klucik
+      orcid: 0009-0008-5539-797X
+      github: oftfrfbf
+      affiliations: CIRES University of Colorado Boulder
+    - id: xdong
+      name: Xue (Alice) Dong
+      orcid: 0009-0009-8335-558X
+      github: alicexdong
+      affiliations: Colorado State University
+    - id: jlober
+      name: Julia R. Lober
+      orcid: 0000-0003-3004-0583
+      github: julober
+      affiliations: Boise State University
+    - id: jnsingi
+      name: Joseph Mayala Nsingi
+      orcid: 0000-0003-4946-8555
+      github: MayalaNsingi
+      affiliations: Montclair State University
+    - id: msears
+      name: Mya Sears
+      orcid: 0009-0003-5870-7498
+      github: myasea8
+      affiliations: NSF NCAR EOL
