@@ -32,3 +32,4 @@ dependencies:
   - adjustText
   - timezonefinder
   - pytz
+  - cartopy_offlinedata
