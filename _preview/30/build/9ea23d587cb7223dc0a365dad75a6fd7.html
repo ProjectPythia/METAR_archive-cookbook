@@ -1,0 +1,393 @@
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_f23696e56cbcbf41fd0bc896d5fac727 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+    
+                    &lt;style&gt;
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+            
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_f23696e56cbcbf41fd0bc896d5fac727&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_f23696e56cbcbf41fd0bc896d5fac727 = L.map(
+                &quot;map_f23696e56cbcbf41fd0bc896d5fac727&quot;,
+                {
+                    center: [39.0598, -105.7189],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 6,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_f23696e56cbcbf41fd0bc896d5fac727);
+
+            
+
+        
+    
+            var tile_layer_00290c05c74e1e6e842cbc9fa710b748 = L.tileLayer(
+                &quot;https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 20,
+  &quot;maxNativeZoom&quot;: 20,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_00290c05c74e1e6e842cbc9fa710b748.addTo(map_f23696e56cbcbf41fd0bc896d5fac727);
+        
+    
+        function geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;#0064FF&quot;, &quot;fillColor&quot;: &quot;#0096FF&quot;, &quot;fillOpacity&quot;: 0.12, &quot;interactive&quot;: false, &quot;weight&quot;: 3};
+            }
+        }
+        function geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_pointToLayer(feature, latlng) {
+            var opts = {
+  &quot;stroke&quot;: true,
+  &quot;color&quot;: &quot;#3388ff&quot;,
+  &quot;weight&quot;: 3,
+  &quot;opacity&quot;: 1.0,
+  &quot;lineCap&quot;: &quot;round&quot;,
+  &quot;lineJoin&quot;: &quot;round&quot;,
+  &quot;dashArray&quot;: null,
+  &quot;dashOffset&quot;: null,
+  &quot;fill&quot;: true,
+  &quot;fillColor&quot;: &quot;#3388ff&quot;,
+  &quot;fillOpacity&quot;: 0.2,
+  &quot;fillRule&quot;: &quot;evenodd&quot;,
+  &quot;bubblingMouseEvents&quot;: true,
+  &quot;radius&quot;: 2,
+};
+            
+            let style = geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                            geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f = L.geoJson(null, {
+                onEachFeature: geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_onEachFeature,
+            
+                style: geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_styler,
+                pointToLayer: geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_add (data) {
+            geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f
+                .addData(data);
+        }
+            geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f_add({&quot;bbox&quot;: [-109.0603, 36.9924, -102.0415, 41.0034], &quot;features&quot;: [{&quot;bbox&quot;: [-109.0603, 36.9924, -102.0415, 41.0034], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-102.0415, 36.9924], [-102.0415, 41.0034], [-109.0603, 41.0034], [-109.0603, 36.9924], [-102.0415, 36.9924]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_b1fe2a1432c0cb914cfa0bef27f7a51f.addTo(map_f23696e56cbcbf41fd0bc896d5fac727);
+        
+    
+        function geo_json_5f190532372f89375b38619124ef7125_styler(feature) {
+            switch(feature.id) {
+                case &quot;0&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.765799256505577, &quot;weight&quot;: 1};
+                case &quot;1&quot;: case &quot;8&quot;: case &quot;12&quot;: case &quot;13&quot;: case &quot;18&quot;: case &quot;19&quot;: case &quot;21&quot;: case &quot;24&quot;: case &quot;25&quot;: case &quot;31&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.991325898389093, &quot;weight&quot;: 1};
+                case &quot;2&quot;: case &quot;4&quot;: case &quot;6&quot;: case &quot;7&quot;: case &quot;23&quot;: case &quot;28&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 18.0, &quot;weight&quot;: 1};
+                case &quot;3&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.904584882280048, &quot;weight&quot;: 1};
+                case &quot;5&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 16.109045848822802, &quot;weight&quot;: 1};
+                case &quot;10&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 14.200743494423792, &quot;weight&quot;: 1};
+                case &quot;11&quot;: case &quot;17&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.973977695167285, &quot;weight&quot;: 1};
+                case &quot;14&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.01115241635688, &quot;weight&quot;: 1};
+                case &quot;15&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.410161090458487, &quot;weight&quot;: 1};
+                case &quot;16&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.739776951672862, &quot;weight&quot;: 1};
+                case &quot;20&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 8.198265179677819, &quot;weight&quot;: 1};
+                case &quot;22&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.21933085501859, &quot;weight&quot;: 1};
+                case &quot;26&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 9.343246592317225, &quot;weight&quot;: 1};
+                case &quot;27&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.236679058240398, &quot;weight&quot;: 1};
+                case &quot;29&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.843866171003718, &quot;weight&quot;: 1};
+                case &quot;30&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 16.915737298636927, &quot;weight&quot;: 1};
+                case &quot;32&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.201982651796776, &quot;weight&quot;: 1};
+                case &quot;33&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.54894671623296, &quot;weight&quot;: 1};
+                case &quot;34&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.30731102850062, &quot;weight&quot;: 1};
+                case &quot;35&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.463444857496902, &quot;weight&quot;: 1};
+                case &quot;36&quot;: case &quot;41&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 5.717472118959108, &quot;weight&quot;: 1};
+                case &quot;37&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.116480793060719, &quot;weight&quot;: 1};
+                case &quot;38&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.107806691449815, &quot;weight&quot;: 1};
+                case &quot;39&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.558859975216853, &quot;weight&quot;: 1};
+                case &quot;40&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.012391573729864, &quot;weight&quot;: 1};
+                case &quot;42&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.064436183395291, &quot;weight&quot;: 1};
+                case &quot;43&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 7.244114002478315, &quot;weight&quot;: 1};
+                case &quot;44&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 5.760842627013631, &quot;weight&quot;: 1};
+                case &quot;45&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 7.877323420074349, &quot;weight&quot;: 1};
+                case &quot;46&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.706319702602231, &quot;weight&quot;: 1};
+                case &quot;47&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 7.391573729863692, &quot;weight&quot;: 1};
+                case &quot;48&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 7.885997521685255, &quot;weight&quot;: 1};
+                case &quot;49&quot;: case &quot;53&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.758364312267657, &quot;weight&quot;: 1};
+                case &quot;50&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.680297397769516, &quot;weight&quot;: 1};
+                case &quot;51&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.211895910780669, &quot;weight&quot;: 1};
+                case &quot;52&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.584882280049566, &quot;weight&quot;: 1};
+                case &quot;54&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.159851301115242, &quot;weight&quot;: 1};
+                case &quot;55&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.411400247831475, &quot;weight&quot;: 1};
+                case &quot;56&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 5.023543990086742, &quot;weight&quot;: 1};
+                case &quot;57&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.029739776951673, &quot;weight&quot;: 1};
+                case &quot;58&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 5.951672862453531, &quot;weight&quot;: 1};
+                case &quot;59&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 7.070631970260223, &quot;weight&quot;: 1};
+                case &quot;60&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 5.8649318463444855, &quot;weight&quot;: 1};
+                case &quot;61&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 4.0, &quot;weight&quot;: 1};
+                case &quot;62&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.246592317224287, &quot;weight&quot;: 1};
+                case &quot;63&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 5.613382899628252, &quot;weight&quot;: 1};
+                case &quot;64&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 6.636926889714994, &quot;weight&quot;: 1};
+                case &quot;65&quot;: 
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 4.503097893432466, &quot;weight&quot;: 1};
+                default:
+                    return {&quot;color&quot;: &quot;#FF3232&quot;, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FF3232&quot;, &quot;fillOpacity&quot;: 0.85, &quot;radius&quot;: 17.34076827757125, &quot;weight&quot;: 1};
+            }
+        }
+        function geo_json_5f190532372f89375b38619124ef7125_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_5f190532372f89375b38619124ef7125_pointToLayer(feature, latlng) {
+            var opts = {
+  &quot;stroke&quot;: true,
+  &quot;color&quot;: &quot;#3388ff&quot;,
+  &quot;weight&quot;: 3,
+  &quot;opacity&quot;: 1.0,
+  &quot;lineCap&quot;: &quot;round&quot;,
+  &quot;lineJoin&quot;: &quot;round&quot;,
+  &quot;dashArray&quot;: null,
+  &quot;dashOffset&quot;: null,
+  &quot;fill&quot;: true,
+  &quot;fillColor&quot;: &quot;#3388ff&quot;,
+  &quot;fillOpacity&quot;: 0.2,
+  &quot;fillRule&quot;: &quot;evenodd&quot;,
+  &quot;bubblingMouseEvents&quot;: true,
+  &quot;radius&quot;: 2,
+};
+            
+            let style = geo_json_5f190532372f89375b38619124ef7125_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_5f190532372f89375b38619124ef7125_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                            geo_json_5f190532372f89375b38619124ef7125.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_5f190532372f89375b38619124ef7125_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_5f190532372f89375b38619124ef7125 = L.geoJson(null, {
+                onEachFeature: geo_json_5f190532372f89375b38619124ef7125_onEachFeature,
+            
+                style: geo_json_5f190532372f89375b38619124ef7125_styler,
+                pointToLayer: geo_json_5f190532372f89375b38619124ef7125_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_5f190532372f89375b38619124ef7125_add (data) {
+            geo_json_5f190532372f89375b38619124ef7125
+                .addData(data);
+        }
+            geo_json_5f190532372f89375b38619124ef7125_add({&quot;bbox&quot;: [-108.7593, 37.1515, -102.241, 40.7503], &quot;features&quot;: [{&quot;bbox&quot;: [-105.5533, 39.8689, -105.5533, 39.8689], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.5533, 39.8689], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3319.951, &quot;latitude&quot;: 39.8689, &quot;longitude&quot;: -105.5533, &quot;name&quot;: &quot;Dakota Hills&quot;, &quot;radius_size&quot;: 17.765799256505577, &quot;station&quot;: &quot;C99&quot;, &quot;total observations&quot;: &quot;2198&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-102.241, 40.1003, -102.241, 40.1003], &quot;geometry&quot;: {&quot;coordinates&quot;: [-102.241, 40.1003], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;1&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1117.7, &quot;latitude&quot;: 40.1003, &quot;longitude&quot;: -102.241, &quot;name&quot;: &quot;Wray&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;2V5&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.2715, 40.7503, -106.2715, 40.7503], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.2715, 40.7503], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;2&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2484.0, &quot;latitude&quot;: 40.7503, &quot;longitude&quot;: -106.2715, &quot;name&quot;: &quot;Walden&quot;, &quot;radius_size&quot;: 18.0, &quot;station&quot;: &quot;33V&quot;, &quot;total observations&quot;: &quot;2225&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.8, 37.45, -106.8, 37.45], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.8, 37.45], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;3&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3584.0, &quot;latitude&quot;: 37.45, &quot;longitude&quot;: -106.8, &quot;name&quot;: &quot;WOLF CREEK PASS (CDOT)&quot;, &quot;radius_size&quot;: 17.904584882280048, &quot;station&quot;: &quot;CPW&quot;, &quot;total observations&quot;: &quot;2214&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.6422, 39.2231, -104.6422, 39.2231], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.6422, 39.2231], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;4&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2152.0, &quot;latitude&quot;: 39.2231, &quot;longitude&quot;: -104.6422, &quot;name&quot;: &quot;MONUMENT/ELBERT (CDOT)&quot;, &quot;radius_size&quot;: 18.0, &quot;station&quot;: &quot;MNH&quot;, &quot;total observations&quot;: &quot;2225&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.056, 37.2863, -107.056, 37.2863], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.056, 37.2863], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;5&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2336.0, &quot;latitude&quot;: 37.2863, &quot;longitude&quot;: -107.056, &quot;name&quot;: &quot;Pagosa Springs&quot;, &quot;radius_size&quot;: 16.109045848822802, &quot;station&quot;: &quot;PSO&quot;, &quot;total observations&quot;: &quot;2007&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.17, 38.1, -106.17, 38.1], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.17, 38.1], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;6&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2385.0, &quot;latitude&quot;: 38.1, &quot;longitude&quot;: -106.17, &quot;name&quot;: &quot;SAGUACHE MUNI&quot;, &quot;radius_size&quot;: 18.0, &quot;station&quot;: &quot;04V&quot;, &quot;total observations&quot;: &quot;2225&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.7639, 39.7939, -105.7639, 39.7939], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.7639, 39.7939], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;7&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3792.0, &quot;latitude&quot;: 39.7939, &quot;longitude&quot;: -105.7639, &quot;name&quot;: &quot;Berthoud Pass&quot;, &quot;radius_size&quot;: 18.0, &quot;station&quot;: &quot;0CO&quot;, &quot;total observations&quot;: &quot;2225&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.1058, 38.428, -105.1058, 38.428], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.1058, 38.428], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;8&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1645.1505, &quot;latitude&quot;: 38.428, &quot;longitude&quot;: -105.1058, &quot;name&quot;: &quot;Canon City&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;1V6&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.3689, 40.0537, -106.3689, 40.0537], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.3689, 40.0537], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;9&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2259.0, &quot;latitude&quot;: 40.0537, &quot;longitude&quot;: -106.3689, &quot;name&quot;: &quot;KREMMLING&quot;, &quot;radius_size&quot;: 17.34076827757125, &quot;station&quot;: &quot;20V&quot;, &quot;total observations&quot;: &quot;2149&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.6992, 40.3544, -106.6992, 40.3544], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.6992, 40.3544], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;10&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3210.7876, &quot;latitude&quot;: 40.3544, &quot;longitude&quot;: -106.6992, &quot;name&quot;: &quot;Walton Peak&quot;, &quot;radius_size&quot;: 14.200743494423792, &quot;station&quot;: &quot;C07&quot;, &quot;total observations&quot;: &quot;1787&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.5699, 38.9457, -104.5699, 38.9457], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.5699, 38.9457], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;11&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2082.0, &quot;latitude&quot;: 38.9457, &quot;longitude&quot;: -104.5699, &quot;name&quot;: &quot;Meadow Lake&quot;, &quot;radius_size&quot;: 17.973977695167285, &quot;station&quot;: &quot;FLY&quot;, &quot;total observations&quot;: &quot;2222&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-103.8041, 40.334, -103.8041, 40.334], &quot;geometry&quot;: {&quot;coordinates&quot;: [-103.8041, 40.334], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;12&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1376.0051, &quot;latitude&quot;: 40.334, &quot;longitude&quot;: -103.8041, &quot;name&quot;: &quot;Fort Morgan&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;FMM&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.9085, 37.9538, -107.9085, 37.9538], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.9085, 37.9538], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;13&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2769.0, &quot;latitude&quot;: 37.9538, &quot;longitude&quot;: -107.9085, &quot;name&quot;: &quot;TELLURIDE REGIONAL&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;TEX&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.514, 39.05, -105.514, 39.05], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.514, 39.05], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;14&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3438.0, &quot;latitude&quot;: 39.05, &quot;longitude&quot;: -105.514, &quot;name&quot;: &quot;WILKERSON PASS&quot;, &quot;radius_size&quot;: 17.01115241635688, &quot;station&quot;: &quot;4BM&quot;, &quot;total observations&quot;: &quot;2111&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.7593, 40.0956, -108.7593, 40.0956], &quot;geometry&quot;: {&quot;coordinates&quot;: [-108.7593, 40.0956], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;15&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1605.0275, &quot;latitude&quot;: 40.0956, &quot;longitude&quot;: -108.7593, &quot;name&quot;: &quot;Rangely&quot;, &quot;radius_size&quot;: 17.410161090458487, &quot;station&quot;: &quot;4V0&quot;, &quot;total observations&quot;: &quot;2157&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.379, 39.426, -107.379, 39.426], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.379, 39.426], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;16&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3232.0, &quot;latitude&quot;: 39.426, &quot;longitude&quot;: -107.379, &quot;name&quot;: &quot;Sunlight&quot;, &quot;radius_size&quot;: 17.739776951672862, &quot;station&quot;: &quot;5SM&quot;, &quot;total observations&quot;: &quot;2195&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.0636, 38.7864, -108.0636, 38.7864], &quot;geometry&quot;: {&quot;coordinates&quot;: [-108.0636, 38.7864], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;17&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1572.5869, &quot;latitude&quot;: 38.7864, &quot;longitude&quot;: -108.0636, &quot;name&quot;: &quot;Delta&quot;, &quot;radius_size&quot;: 17.973977695167285, &quot;station&quot;: &quot;AJZ&quot;, &quot;total observations&quot;: &quot;2222&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.0486, 38.5383, -106.0486, 38.5383], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.0486, 38.5383], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;18&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2293.0, &quot;latitude&quot;: 38.5383, &quot;longitude&quot;: -106.0486, &quot;name&quot;: &quot;Salida&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;ANK&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.153, 39.475, -106.153, 39.475], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.153, 39.475], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;19&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3680.0, &quot;latitude&quot;: 39.475, &quot;longitude&quot;: -106.153, &quot;name&quot;: &quot;RED CLIFF PASS (CDOT)&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;CCU&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.5376, 39.7841, -104.5376, 39.7841], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.5376, 39.7841], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;20&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1674.3636, &quot;latitude&quot;: 39.7841, &quot;longitude&quot;: -104.5376, &quot;name&quot;: &quot;Colorado Air and Space&quot;, &quot;radius_size&quot;: 8.198265179677819, &quot;station&quot;: &quot;CFO&quot;, &quot;total observations&quot;: &quot;1095&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-103.2648, 40.6153, -103.2648, 40.6153], &quot;geometry&quot;: {&quot;coordinates&quot;: [-103.2648, 40.6153], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;21&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1230.0, &quot;latitude&quot;: 40.6153, &quot;longitude&quot;: -103.2648, &quot;name&quot;: &quot;Sterling&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;STK&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.1668, 37.5007, -105.1668, 37.5007], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.1668, 37.5007], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;22&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3114.0, &quot;latitude&quot;: 37.5007, &quot;longitude&quot;: -105.1668, &quot;name&quot;: &quot;LA VETA PASS (CDOT)&quot;, &quot;radius_size&quot;: 17.21933085501859, &quot;station&quot;: &quot;VTP&quot;, &quot;total observations&quot;: &quot;2135&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.2181, 38.7825, -106.2181, 38.7825], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.2181, 38.7825], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;23&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2995.0, &quot;latitude&quot;: 38.7825, &quot;longitude&quot;: -106.2181, &quot;name&quot;: &quot;COTTONWOOD PASS&quot;, &quot;radius_size&quot;: 18.0, &quot;station&quot;: &quot;7BM&quot;, &quot;total observations&quot;: &quot;2225&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.1207, 38.8142, -106.1207, 38.8142], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.1207, 38.8142], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;24&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2422.0, &quot;latitude&quot;: 38.8142, &quot;longitude&quot;: -106.1207, &quot;name&quot;: &quot;BUENA VISTA&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;AEJ&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.2258, 40.0394, -105.2258, 40.0394], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.2258, 40.0394], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;25&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1612.0, &quot;latitude&quot;: 40.0394, &quot;longitude&quot;: -105.2258, &quot;name&quot;: &quot;Boulder&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;BDU&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.1172, 39.9088, -105.1172, 39.9088], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.1172, 39.9088], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;26&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1724.0, &quot;latitude&quot;: 39.9088, &quot;longitude&quot;: -105.1172, &quot;name&quot;: &quot;BROOMFIELD/JEFFCO&quot;, &quot;radius_size&quot;: 9.343246592317225, &quot;station&quot;: &quot;BJC&quot;, &quot;total observations&quot;: &quot;1227&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.048, 40.0102, -105.048, 40.0102], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.048, 40.0102], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;27&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1563.6, &quot;latitude&quot;: 40.0102, &quot;longitude&quot;: -105.048, &quot;name&quot;: &quot;Erie&quot;, &quot;radius_size&quot;: 17.236679058240398, &quot;station&quot;: &quot;EIK&quot;, &quot;total observations&quot;: &quot;2137&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-102.2727, 40.5694, -102.2727, 40.5694], &quot;geometry&quot;: {&quot;coordinates&quot;: [-102.2727, 40.5694], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;28&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1137.0, &quot;latitude&quot;: 40.5694, &quot;longitude&quot;: -102.2727, &quot;name&quot;: &quot;Holyoke&quot;, &quot;radius_size&quot;: 18.0, &quot;station&quot;: &quot;HEQ&quot;, &quot;total observations&quot;: &quot;2225&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.163, 40.1637, -105.163, 40.1637], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.163, 40.1637], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;29&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1541.0, &quot;latitude&quot;: 40.1637, &quot;longitude&quot;: -105.163, &quot;name&quot;: &quot;LONGMONT/VBRAND&quot;, &quot;radius_size&quot;: 17.843866171003718, &quot;station&quot;: &quot;LMO&quot;, &quot;total observations&quot;: &quot;2207&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.3168, 38.484, -106.3168, 38.484], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.3168, 38.484], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;30&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3667.0, &quot;latitude&quot;: 38.484, &quot;longitude&quot;: -106.3168, &quot;name&quot;: &quot;MONARCH PASS (CDOT)&quot;, &quot;radius_size&quot;: 16.915737298636927, &quot;station&quot;: &quot;MYP&quot;, &quot;total observations&quot;: &quot;2100&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.352, 37.7138, -106.352, 37.7138], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.352, 37.7138], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;31&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2411.7869, &quot;latitude&quot;: 37.7138, &quot;longitude&quot;: -106.352, &quot;name&quot;: &quot;Del Norte&quot;, &quot;radius_size&quot;: 17.991325898389093, &quot;station&quot;: &quot;RCV&quot;, &quot;total observations&quot;: &quot;2224&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.8663, 40.5162, -106.8663, 40.5162], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.8663, 40.5162], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;32&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2096.0, &quot;latitude&quot;: 40.5162, &quot;longitude&quot;: -106.8663, &quot;name&quot;: &quot;STEAMBOAT SPRINGS&quot;, &quot;radius_size&quot;: 17.201982651796776, &quot;station&quot;: &quot;SBS&quot;, &quot;total observations&quot;: &quot;2133&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-102.7128, 40.1046, -102.7128, 40.1046], &quot;geometry&quot;: {&quot;coordinates&quot;: [-102.7128, 40.1046], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;33&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1255.8844, &quot;latitude&quot;: 40.1046, &quot;longitude&quot;: -102.7128, &quot;name&quot;: &quot;Yuma&quot;, &quot;radius_size&quot;: 17.54894671623296, &quot;station&quot;: &quot;2V6&quot;, &quot;total observations&quot;: &quot;2173&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.8614, 37.4389, -105.8614, 37.4389], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.8614, 37.4389], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;34&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2299.0, &quot;latitude&quot;: 37.4389, &quot;longitude&quot;: -105.8614, &quot;name&quot;: &quot;ALAMOSA MUNI(AWOS)&quot;, &quot;radius_size&quot;: 6.30731102850062, &quot;station&quot;: &quot;ALS&quot;, &quot;total observations&quot;: &quot;877&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.8689, 39.2232, -106.8689, 39.2232], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.8689, 39.2232], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;35&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2382.0, &quot;latitude&quot;: 39.2232, &quot;longitude&quot;: -106.8689, &quot;name&quot;: &quot;ASPEN/SARDY FIELD&quot;, &quot;radius_size&quot;: 6.463444857496902, &quot;station&quot;: &quot;ASE&quot;, &quot;total observations&quot;: &quot;895&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.54, 39.1342, -108.54, 39.1342], &quot;geometry&quot;: {&quot;coordinates&quot;: [-108.54, 39.1342], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;36&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1475.0, &quot;latitude&quot;: 39.1342, &quot;longitude&quot;: -108.54, &quot;name&quot;: &quot;GRAND JUNCTION&quot;, &quot;radius_size&quot;: 5.717472118959108, &quot;station&quot;: &quot;GJT&quot;, &quot;total observations&quot;: &quot;809&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-102.6881, 38.07, -102.6881, 38.07], &quot;geometry&quot;: {&quot;coordinates&quot;: [-102.6881, 38.07], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;37&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1103.0, &quot;latitude&quot;: 38.07, &quot;longitude&quot;: -102.6881, &quot;name&quot;: &quot;LAMAR&quot;, &quot;radius_size&quot;: 6.116480793060719, &quot;station&quot;: &quot;LAA&quot;, &quot;total observations&quot;: &quot;855&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.8975, 38.505, -107.8975, 38.505], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.8975, 38.505], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;38&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1755.0, &quot;latitude&quot;: 38.505, &quot;longitude&quot;: -107.8975, &quot;name&quot;: &quot;MONTROSE CO. ARPT&quot;, &quot;radius_size&quot;: 6.107806691449815, &quot;station&quot;: &quot;MTJ&quot;, &quot;total observations&quot;: &quot;854&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.4983, 38.29, -104.4983, 38.29], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.4983, 38.29], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;39&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1439.0, &quot;latitude&quot;: 38.29, &quot;longitude&quot;: -104.4983, &quot;name&quot;: &quot;PUEBLO MEMORIAL(AW)&quot;, &quot;radius_size&quot;: 6.558859975216853, &quot;station&quot;: &quot;PUB&quot;, &quot;total observations&quot;: &quot;906&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.6575, 39.8328, -104.6575, 39.8328], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.6575, 39.8328], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;40&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1656.0, &quot;latitude&quot;: 39.8328, &quot;longitude&quot;: -104.6575, &quot;name&quot;: &quot;DENVER INTNL ARPT&quot;, &quot;radius_size&quot;: 6.012391573729864, &quot;station&quot;: &quot;DEN&quot;, &quot;total observations&quot;: &quot;843&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-102.2854, 39.2425, -102.2854, 39.2425], &quot;geometry&quot;: {&quot;coordinates&quot;: [-102.2854, 39.2425], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;41&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1285.0, &quot;latitude&quot;: 39.2425, &quot;longitude&quot;: -102.2854, &quot;name&quot;: &quot;BURLINGTON&quot;, &quot;radius_size&quot;: 5.717472118959108, &quot;station&quot;: &quot;ITR&quot;, &quot;total observations&quot;: &quot;809&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.7269, 39.5263, -107.7269, 39.5263], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.7269, 39.5263], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;42&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1691.0, &quot;latitude&quot;: 39.5263, &quot;longitude&quot;: -107.7269, &quot;name&quot;: &quot;RIFLE/GARFIELD RGNL&quot;, &quot;radius_size&quot;: 6.064436183395291, &quot;station&quot;: &quot;RIL&quot;, &quot;total observations&quot;: &quot;849&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-103.222, 40.1756, -103.222, 40.1756], &quot;geometry&quot;: {&quot;coordinates&quot;: [-103.222, 40.1756], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;43&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1431.0, &quot;latitude&quot;: 40.1756, &quot;longitude&quot;: -103.222, &quot;name&quot;: &quot;AKRON/WASHINGTON CO&quot;, &quot;radius_size&quot;: 7.244114002478315, &quot;station&quot;: &quot;AKO&quot;, &quot;total observations&quot;: &quot;985&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.85, 39.57, -104.85, 39.57], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.85, 39.57], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;44&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1793.0, &quot;latitude&quot;: 39.57, &quot;longitude&quot;: -104.85, &quot;name&quot;: &quot;DENVER/CENTENNIAL&quot;, &quot;radius_size&quot;: 5.760842627013631, &quot;station&quot;: &quot;APA&quot;, &quot;total observations&quot;: &quot;814&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.5216, 40.4952, -107.5216, 40.4952], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.5216, 40.4952], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;45&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1915.0, &quot;latitude&quot;: 40.4952, &quot;longitude&quot;: -107.5216, &quot;name&quot;: &quot;Craig - Moffat&quot;, &quot;radius_size&quot;: 7.877323420074349, &quot;station&quot;: &quot;CAG&quot;, &quot;total observations&quot;: &quot;1058&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.6281, 37.303, -108.6281, 37.303], &quot;geometry&quot;: {&quot;coordinates&quot;: [-108.6281, 37.303], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;46&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1803.0, &quot;latitude&quot;: 37.303, &quot;longitude&quot;: -108.6281, &quot;name&quot;: &quot;CORTEZ/MONTEZUMA CO&quot;, &quot;radius_size&quot;: 6.706319702602231, &quot;station&quot;: &quot;CEZ&quot;, &quot;total observations&quot;: &quot;923&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.7538, 37.1515, -107.7538, 37.1515], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.7538, 37.1515], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;47&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2038.0, &quot;latitude&quot;: 37.1515, &quot;longitude&quot;: -107.7538, &quot;name&quot;: &quot;DURANGO/LA PLATA CO&quot;, &quot;radius_size&quot;: 7.391573729863692, &quot;station&quot;: &quot;DRO&quot;, &quot;total observations&quot;: &quot;1002&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.3161, 39.2281, -106.3161, 39.2281], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.3161, 39.2281], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;48&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 3026.0, &quot;latitude&quot;: 39.2281, &quot;longitude&quot;: -106.3161, &quot;name&quot;: &quot;LEADVILLE/LAKE CO.&quot;, &quot;radius_size&quot;: 7.885997521685255, &quot;station&quot;: &quot;LXV&quot;, &quot;total observations&quot;: &quot;1059&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.8859, 40.0488, -107.8859, 40.0488], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.8859, 40.0488], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;49&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1957.0, &quot;latitude&quot;: 40.0488, &quot;longitude&quot;: -107.8859, &quot;name&quot;: &quot;MEEKER&quot;, &quot;radius_size&quot;: 6.758364312267657, &quot;station&quot;: &quot;EEO&quot;, &quot;total observations&quot;: &quot;929&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-103.5122, 38.0494, -103.5122, 38.0494], &quot;geometry&quot;: {&quot;coordinates&quot;: [-103.5122, 38.0494], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;50&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1292.0, &quot;latitude&quot;: 38.0494, &quot;longitude&quot;: -103.5122, &quot;name&quot;: &quot;LA JUNTA MUNICIPAL&quot;, &quot;radius_size&quot;: 6.680297397769516, &quot;station&quot;: &quot;LHX&quot;, &quot;total observations&quot;: &quot;920&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.7008, 38.8058, -104.7008, 38.8058], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.7008, 38.8058], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;51&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1881.0, &quot;latitude&quot;: 38.8058, &quot;longitude&quot;: -104.7008, &quot;name&quot;: &quot;COLORADO SPRINGS&quot;, &quot;radius_size&quot;: 6.211895910780669, &quot;station&quot;: &quot;COS&quot;, &quot;total observations&quot;: &quot;866&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.3407, 37.2594, -104.3407, 37.2594], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.3407, 37.2594], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;52&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1756.0, &quot;latitude&quot;: 37.2594, &quot;longitude&quot;: -104.3407, &quot;name&quot;: &quot;TRINIDAD/ANIMAS CO.&quot;, &quot;radius_size&quot;: 6.584882280049566, &quot;station&quot;: &quot;TAD&quot;, &quot;total observations&quot;: &quot;909&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-103.6659, 39.2748, -103.6659, 39.2748], &quot;geometry&quot;: {&quot;coordinates&quot;: [-103.6659, 39.2748], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;53&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1635.0, &quot;latitude&quot;: 39.2748, &quot;longitude&quot;: -103.6659, &quot;name&quot;: &quot;LIMON MUNICIPAL&quot;, &quot;radius_size&quot;: 6.758364312267657, &quot;station&quot;: &quot;LIC&quot;, &quot;total observations&quot;: &quot;929&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.933, 38.5339, -106.933, 38.5339], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.933, 38.5339], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;54&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2339.0, &quot;latitude&quot;: 38.5339, &quot;longitude&quot;: -106.933, &quot;name&quot;: &quot;GUNNISON CO. (AWOS)&quot;, &quot;radius_size&quot;: 6.159851301115242, &quot;station&quot;: &quot;GUC&quot;, &quot;total observations&quot;: &quot;860&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-105.0113, 40.4518, -105.0113, 40.4518], &quot;geometry&quot;: {&quot;coordinates&quot;: [-105.0113, 40.4518], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;55&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1529.0, &quot;latitude&quot;: 40.4518, &quot;longitude&quot;: -105.0113, &quot;name&quot;: &quot;FORT COLLINS (AWOS)&quot;, &quot;radius_size&quot;: 6.411400247831475, &quot;station&quot;: &quot;FNL&quot;, &quot;total observations&quot;: &quot;889&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-102.6139, 37.2833, -102.6139, 37.2833], &quot;geometry&quot;: {&quot;coordinates&quot;: [-102.6139, 37.2833], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;56&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1335.0, &quot;latitude&quot;: 37.2833, &quot;longitude&quot;: -102.6139, &quot;name&quot;: &quot;SPRINGFIELD/COMANCHE NATL GRASS&quot;, &quot;radius_size&quot;: 5.023543990086742, &quot;station&quot;: &quot;SPD&quot;, &quot;total observations&quot;: &quot;729&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-106.9177, 39.6426, -106.9177, 39.6426], &quot;geometry&quot;: {&quot;coordinates&quot;: [-106.9177, 39.6426], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;57&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1993.0, &quot;latitude&quot;: 39.6426, &quot;longitude&quot;: -106.9177, &quot;name&quot;: &quot;EAGLE CO. REGIONAL&quot;, &quot;radius_size&quot;: 6.029739776951673, &quot;station&quot;: &quot;EGE&quot;, &quot;total observations&quot;: &quot;845&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.6332, 40.4374, -104.6332, 40.4374], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.6332, 40.4374], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;58&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1420.0, &quot;latitude&quot;: 40.4374, &quot;longitude&quot;: -104.6332, &quot;name&quot;: &quot;GREELEY/WELD (AWOS)&quot;, &quot;radius_size&quot;: 5.951672862453531, &quot;station&quot;: &quot;GXY&quot;, &quot;total observations&quot;: &quot;836&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.22, 40.48, -107.22, 40.48], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.22, 40.48], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;59&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2012.0, &quot;latitude&quot;: 40.48, &quot;longitude&quot;: -107.22, &quot;name&quot;: &quot;HAYDEN/YAMPA (AWOS)&quot;, &quot;radius_size&quot;: 7.070631970260223, &quot;station&quot;: &quot;HDN&quot;, &quot;total observations&quot;: &quot;965&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.85, 38.75, -104.85, 38.75], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.85, 38.75], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;60&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2227.647, &quot;latitude&quot;: 38.75, &quot;longitude&quot;: -104.85, &quot;name&quot;: &quot;Cheyenne Mountain&quot;, &quot;radius_size&quot;: 5.8649318463444855, &quot;station&quot;: &quot;CWN&quot;, &quot;total observations&quot;: &quot;826&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-103.8371, 40.6319, -103.8371, 40.6319], &quot;geometry&quot;: {&quot;coordinates&quot;: [-103.8371, 40.6319], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;61&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1462.5062, &quot;latitude&quot;: 40.6319, &quot;longitude&quot;: -103.8371, &quot;name&quot;: &quot;Raymer&quot;, &quot;radius_size&quot;: 4.0, &quot;station&quot;: &quot;1NW&quot;, &quot;total observations&quot;: &quot;611&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.7566, 38.6784, -104.7566, 38.6784], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.7566, 38.6784], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;62&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1789.0, &quot;latitude&quot;: 38.6784, &quot;longitude&quot;: -104.7566, &quot;name&quot;: &quot;FORT CARSON/BUTTS&quot;, &quot;radius_size&quot;: 6.246592317224287, &quot;station&quot;: &quot;FCS&quot;, &quot;total observations&quot;: &quot;870&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.3083, 38.7578, -104.3083, 38.7578], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.3083, 38.7578], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;63&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1840.0, &quot;latitude&quot;: 38.7578, &quot;longitude&quot;: -104.3083, &quot;name&quot;: &quot;ELLICOTT-B AFA&quot;, &quot;radius_size&quot;: 5.613382899628252, &quot;station&quot;: &quot;ABH&quot;, &quot;total observations&quot;: &quot;797&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.8128, 38.9697, -104.8128, 38.9697], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.8128, 38.9697], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;64&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 2003.0, &quot;latitude&quot;: 38.9697, &quot;longitude&quot;: -104.8128, &quot;name&quot;: &quot;AIR FORCE ACADEMY&quot;, &quot;radius_size&quot;: 6.636926889714994, &quot;station&quot;: &quot;AFF&quot;, &quot;total observations&quot;: &quot;915&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-104.7517, 39.7017, -104.7517, 39.7017], &quot;geometry&quot;: {&quot;coordinates&quot;: [-104.7517, 39.7017], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;65&quot;, &quot;properties&quot;: {&quot;elevation&quot;: 1726.0, &quot;latitude&quot;: 39.7017, &quot;longitude&quot;: -104.7517, &quot;name&quot;: &quot;BUCKLEY ANGB/DENVER&quot;, &quot;radius_size&quot;: 4.503097893432466, &quot;station&quot;: &quot;BKF&quot;, &quot;total observations&quot;: &quot;669&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+    geo_json_5f190532372f89375b38619124ef7125.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+    
+    let handleObject = feature =&gt; {
+        if (feature === null) {
+            return &#x27;&#x27;;
+        } else if (typeof(feature)==&#x27;object&#x27;) {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = [&quot;station&quot;, &quot;name&quot;, &quot;total observations&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;elevation&quot;];
+    let aliases = [&quot;station&quot;, &quot;name&quot;, &quot;total observations&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;elevation&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+            
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  &quot;sticky&quot;: true,
+  &quot;className&quot;: &quot;foliumtooltip&quot;,
+});
+                     
+    
+            geo_json_5f190532372f89375b38619124ef7125.addTo(map_f23696e56cbcbf41fd0bc896d5fac727);
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
