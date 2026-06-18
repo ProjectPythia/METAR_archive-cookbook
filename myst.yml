@@ -27,6 +27,7 @@ project:
         - file: notebooks/primer.ipynb
     - title: Examples 
       children: 
+        - file: notebooks/MetPy_Metar_Map.ipynb
         - file: notebooks/Geopandas_Visualization.ipynb
         - file: notebooks/Lonboard_Visualization.ipynb
         - file: notebooks/local_statistics.ipynb
