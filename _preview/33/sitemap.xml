@@ -11,6 +11,9 @@
     <loc>http://localhost:3000/notebooks/primer</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/notebooks/geopandas-visualization</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/notebooks/lonboard-visualization</loc>
   </url>
   <url>
