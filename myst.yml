@@ -31,6 +31,7 @@ project:
         - file: notebooks/Lonboard_Visualization.ipynb
         - file: notebooks/local_statistics.ipynb
         - file: notebooks/reanalysis_comparison.ipynb
+        - file: notebooks/Dataset_Restructuring.ipynb
         - file: notebooks/AI_Assistant.ipynb
   jupyter:
       binder:
