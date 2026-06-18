@@ -6,35 +6,29 @@
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/METAR_archive-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/475509405.svg)](https://zenodo.org/badge/latestdoi/475509405)
 
-_See the [Cookbook Contributor's Guide](https://projectpythia.org/cookbook-guide) for step-by-step instructions on how to create your new Cookbook and get it hosted on the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org)!_
-
-This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
+This Project Pythia Cookbook accesses, analyzes, and visualizes real-time and archived surface meteorological observations from a worldwide network of (mostly) airport locations, originally encoded in [METAR](https://www.weather.gov/asos/METAR.html) format.
 
 ## Motivation
 
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
-
-## Authors
-
-First Author, Second Author, etc. _Acknowledge primary content authors here! You can include links to their GitHub profiles or other unique pages._
-
-### Contributors
-
-<a href="https://github.com/ProjectPythia/METAR_archive-cookbook/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/METAR_archive-cookbook" />
-</a>
+While a number of Pythia cookbooks have focused on raster-based datasets (e.g., NWP and reanalysis output in NetCDF and Zarr), there is a need for similar examples which use direct observational data at actual physical locations. These inherently tabular datasets are well-suited for not only Python tools such as Pandas but also those that provide database-like query-based services (e.g. DuckDB).
 
 ## Structure
 
-(State one or more sections that will comprise the notebook. E.g., _This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."_ Then, describe each section below.)
+We will work with a cloud-served, continually-updating archive of METAR observations that are in GeoParquet format. We will use DuckDB to query them, create a simple method to visualize world-wide surface weather observations at a given hour, perform a variety of time-series analyses, and statically and/or interactively visualize our results with Matplotlib, Geopandas and Lonboard.
 
-### Section 1 ( Replace with the title of this section, e.g. "Foundations" )
+### Section 1 (Introduction)
 
-(Add content for this section, e.g., "The foundational content includes ... ")
+We will describe the file format of the METAR archive (Parquet) and give an overview of DuckDB, which we will use to perform SQL-like queries on the archive.
 
-### Section 2 ( Replace with the title of this section, e.g. "Example workflows" )
 
-(Add content for this section, e.g., "Example workflows include ... ")
+### Section 2 ( Examples )
+
+1. Create a synoptic station model plot from METAR observations at a current or user-specified hour.
+2. Perform an interactive visualization of METAR data using GeoPandas.
+3. Perform an interactive visualization of METAR data using Lonboard.
+4. Time-series analysis
+5. Compare METAR observations to gridded reanalyses
+6. Demonstrate an AI agent that translates METAR observations into plain-language text.
 
 ## Running the Notebooks
 

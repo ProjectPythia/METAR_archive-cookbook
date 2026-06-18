@@ -2,6 +2,7 @@ name: METAR-archive-cookbook
 channels:
   - conda-forge
 dependencies:
+  - python>=3.14
   - jupyterlab
   - mystmd
   - jupyterlab-myst
@@ -14,3 +15,18 @@ dependencies:
   - dask 
   - seaborn
   - vim
+  - intake
+  - intake-parquet
+  - intake-xarray
+  - pgeocode
+  - pandas
+  - numpy
+  - hvplot
+  - holoviews
+  - shapely
+  - ipywidgets
+  - palettable
+  - sidecar
+  - geodatasets
+  - geopy
+  - timezonefinder
