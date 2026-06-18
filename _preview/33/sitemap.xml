@@ -8,19 +8,13 @@
     <loc>http://localhost:3000/notebooks/how-to-cite</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/intro</loc>
-  </url>
-  <url>
     <loc>http://localhost:3000/notebooks/primer</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/local-statistics</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/notebooks/interactive-viz</loc>
-  </url>
-  <url>
     <loc>http://localhost:3000/notebooks/lonboard-visualization</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/local-statistics</loc>
   </url>
   <url>
     <loc>http://localhost:3000/notebooks/reanalysis-comparison</loc>
