@@ -32,3 +32,4 @@ dependencies:
   - adjustText
   - timezonefinder
   - pytz
+  - matplotlib<3.11
