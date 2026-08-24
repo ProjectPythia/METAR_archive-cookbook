@@ -28,13 +28,12 @@ project:
     - title: Examples 
       children: 
         - file: notebooks/MetPy_METAR_Map.ipynb
-        - file: notebooks/Geopandas_Visualization.ipynb
-        - file: notebooks/Lonboard_Visualization.ipynb
-        - file: notebooks/local_statistics.ipynb
-        - file: notebooks/Temperature.ipynb
-        - file: notebooks/reanalysis_comparison.ipynb
-        - file: notebooks/Dataset_Restructuring.ipynb
-        - file: notebooks/AI_Assistant.ipynb
+        - file: notebooks/Geopandas_visualization.ipynb
+        - file: notebooks/Lonboard_visualization.ipynb
+        - file: notebooks/Local_statistics.ipynb
+        - file: notebooks/Reanalysis_comparison.ipynb
+        - file: notebooks/Dataset_restructuring.ipynb
+        - file: notebooks/AI_assistant.ipynb
   jupyter:
       binder:
         url: https://binder.projectpythia.org
