@@ -24,7 +24,7 @@ project:
         - file: notebooks/how-to-cite.md
     - title: Introduction
       children:
-        - file: notebooks/primer.ipynb
+        - file: notebooks/Primer.ipynb
     - title: Examples 
       children: 
         - file: notebooks/MetPy_METAR_Map.ipynb
