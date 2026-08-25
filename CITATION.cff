@@ -41,3 +41,4 @@ authors:
     website: "https://github.com/ProjectPythia/cookbook-template/graphs/contributors"
 title: "METAR_archive-cookbook"
 abstract: "A cookbook for analyzing and visualizing METAR data"
+name: "METAR Archive Cookbook contributors"
