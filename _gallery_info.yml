@@ -1,6 +1,15 @@
 thumbnail: thumbnail.png
 tags:
   domains:
-    - sampledomain
+    - meteorology
+    - climatology
   packages:
-    - samplepackage
+    - duckdb
+    - metpy
+    - xarray
+    - lonboard
+    - geopandas
+    - matplotlib
+    - cartopy
+  events:
+    - Cook-off 2026

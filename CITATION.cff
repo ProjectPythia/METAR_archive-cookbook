@@ -7,37 +7,38 @@ authors:
     orcid: https://orcid.org/0000-0001-5249-9665
     website: https://github.com/ktyle
     affiliation: University at Albany (State University of New York)
-  - family-names: Klucik
-    given-names: Rudy
-    orcid: https://orcid.org/0009-0008-5539-797X
-    website: https://github.com/oftfrfbf
-    affiliation: CIRES University of Colorado Boulder
-  - name: "Cookbook Template contributors" # use the 'name' field to acknowledge organizations
-    website: "https://github.com/ProjectPythia/cookbook-template/graphs/contributors"
-  - family-names: Espinoza
-    given-names: Ana V.
-    orcid: https://orcid.org/0000-0002-6292-073X
-    website: https://github.com/ana-v-espinoza
-    affiliation: UCAR | UCP | NSF Unidata
-  - family-names: Sears
-    given-names: Mya
-    orcid: https://orcid.org/0009-0003-5870-7498
-    website: https://github.com/myasea8
-    affiliation: NSF NCAR EOL
-  - family-names: Mayala Nsingi
-    given-names: Joseph
-    orcid: https://orcid.org/0000-0003-4946-8555
-    website: https://github.com/MayalaNsingi
-    affiliation: Montclair State University
   - family-names: Dong
     given-names: Xue
     orcid: https://orcid.org/0009-0009-8335-558X
     website: https://github.com/alicexdong
     affiliation: Colorado State University
+  - family-names: Espinoza
+    given-names: Ana V.
+    orcid: https://orcid.org/0000-0002-6292-073X
+    website: https://github.com/ana-v-espinoza
+    affiliation: UCAR | UCP | NSF Unidata
+  - family-names: Klucik
+    given-names: Rudy
+    orcid: https://orcid.org/0009-0008-5539-797X
+    website: https://github.com/oftfrfbf
+    affiliation: CIRES University of Colorado Boulder
   - family-names: Lober
     given-names: Julia R.
     orcid: https://orcid.org/0000-0003-3004-0583
     website: https://github.com/julober
     affiliation: Boise State University
+  - family-names: Mayala Nsingi
+    given-names: Joseph
+    orcid: https://orcid.org/0000-0003-4946-8555
+    website: https://github.com/MayalaNsingi
+    affiliation: Montclair State University
+  - family-names: Sears
+    given-names: Mya
+    orcid: https://orcid.org/0009-0003-5870-7498
+    website: https://github.com/myasea8
+    affiliation: NSF NCAR EOL
+  - name: "Cookbook Template contributors" # use the 'name' field to acknowledge organizations
+    website: "https://github.com/ProjectPythia/cookbook-template/graphs/contributors"
 title: "METAR_archive-cookbook"
 abstract: "A cookbook for analyzing and visualizing METAR data"
+name: "METAR Archive Cookbook contributors"
