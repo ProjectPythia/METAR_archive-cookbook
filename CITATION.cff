@@ -38,7 +38,7 @@ authors:
     website: https://github.com/myasea8
     affiliation: NSF NCAR EOL
   - name: "Cookbook Template contributors" # use the 'name' field to acknowledge organizations
-    website: "https://github.com/ProjectPythia/cookbook-template/graphs/contributors"
+    website: "https://github.com/ProjectPythia/METAR_archive-cookbook/graphs/contributors"
 title: "METAR_archive-cookbook"
 abstract: "A cookbook for analyzing and visualizing METAR data"
 name: "METAR Archive Cookbook contributors"
