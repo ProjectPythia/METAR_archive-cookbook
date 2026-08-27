@@ -8,6 +8,8 @@ project:
     - https://github.com/developmentseed/myst-anywidget-static-export/releases/latest/download/plugin.mjs
   title: METAR Archive Cookbook
   github: https://github.com/projectpythia/Metar_archive-cookbook
+  doi: https://doi.org/10.5281/zenodo.22116767
+  abstract: "A cookbook for analyzing and visualizing METAR data"
   authors:
     - xdong
     - aespinoza

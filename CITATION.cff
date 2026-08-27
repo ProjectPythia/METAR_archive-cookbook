@@ -42,3 +42,9 @@ authors:
 title: "METAR_archive-cookbook"
 abstract: "A cookbook for analyzing and visualizing METAR data"
 name: "METAR Archive Cookbook contributors"
+identifiers: 
+  -type: doi
+   value: https://doi.org/10.5281/zenodo.22116767
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+repository: https://github.com/projectpythia/METAR_archive-cookbook
