@@ -2,9 +2,9 @@
 
 <img src="thumbnails/thumbnail.png" alt="thumbnail" width="300"/>
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
+[![nightly-build](https://github.com/ProjectPythia/METAR_archive-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/METAR_archive-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/METAR_archive-cookbook/main?labpath=notebooks)
-[![DOI](https://zenodo.org/badge/475509405.svg)](https://zenodo.org/badge/latestdoi/475509405)
+[![DOI](https://zenodo.org/badge/1270486574.svg)](https://zenodo.org/badge/latestdoi/1270486574)
 
 This Project Pythia Cookbook accesses, analyzes, and visualizes real-time and archived surface meteorological observations from a worldwide network of (mostly) airport locations, originally encoded in [METAR](https://www.weather.gov/asos/METAR.html) format.
 
