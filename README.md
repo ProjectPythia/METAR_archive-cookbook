@@ -4,7 +4,7 @@
 
 [![nightly-build](https://github.com/ProjectPythia/METAR_archive-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/METAR_archive-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/METAR_archive-cookbook/main?labpath=notebooks)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22116767.svg)](https://doi.org/10.5281/zenodo/22116767)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22116767.svg)](https://doi.org/10.5281/zenodo.22116767)
 
 This Project Pythia Cookbook accesses, analyzes, and visualizes real-time and archived surface meteorological observations from a worldwide network of (mostly) airport locations, originally encoded in [METAR](https://www.weather.gov/asos/METAR.html) format.
 
@@ -73,7 +73,7 @@ If you are interested in running this material locally on your computer, you wil
 1. Create and activate your conda environment from the `environment.yml` file
    ```bash
    conda env create -f environment.yml
-   conda activate METAR-archive-cookbook
+   conda activate METAR_archive-cookbook
    ```
 1. Move into the `notebooks` directory and start up Jupyterlab
    ```bash
