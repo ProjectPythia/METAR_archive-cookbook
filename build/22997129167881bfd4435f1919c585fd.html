@@ -1,0 +1,607 @@
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+  line-height: 1.6;
+  padding-bottom: 4px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.xr-header {
+  border-bottom: solid 1px var(--xr-border-color);
+  margin-bottom: 4px;
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-obj-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type,
+.xr-group-box-contents > label {
+  color: var(--xr-font-color2);
+  display: block;
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item > input,
+.xr-group-box-contents > input,
+.xr-array-wrap > input {
+  display: block;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+}
+
+.xr-section-item > input + label,
+.xr-var-item > input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item > input:enabled + label,
+.xr-var-item > input:enabled + label,
+.xr-array-wrap > input:enabled + label,
+.xr-group-box-contents > input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item > input:focus-visible + label,
+.xr-var-item > input:focus-visible + label,
+.xr-array-wrap > input:focus-visible + label,
+.xr-group-box-contents > input:focus-visible + label {
+  outline: auto;
+}
+
+.xr-section-item > input:enabled + label:hover,
+.xr-var-item > input:enabled + label:hover,
+.xr-array-wrap > input:enabled + label:hover,
+.xr-group-box-contents > input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.xr-section-summary > em {
+  font-weight: normal;
+}
+
+.xr-span-grid {
+  grid-column-end: -1;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label > span {
+  display: inline-block;
+  padding-left: 0.6em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details,
+.xr-group-box-contents > label {
+  padding-top: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in ~ .xr-section-details {
+  display: none;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-children {
+  display: inline-grid;
+  grid-template-columns: 100%;
+  grid-column: 1 / -1;
+  padding-top: 4px;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 30px auto;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 26px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
+  padding-bottom: 4px;
+}
+
+.xr-group-box-contents > label::before {
+  content: "📂";
+  padding-right: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label::before {
+  content: "📁";
+}
+
+.xr-group-box-contents > input:checked + label {
+  padding-bottom: 0px;
+}
+
+.xr-group-box-contents > input:checked ~ .xr-sections {
+  display: none;
+}
+
+.xr-group-box-contents > input + label > span {
+  display: none;
+}
+
+.xr-group-box-ellipsis {
+  font-size: 1.4em;
+  font-weight: 900;
+  color: var(--xr-font-color2);
+  letter-spacing: 0.15em;
+  cursor: default;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataTree&gt;
+Group: /
+├── Group: /BDU
+│       Dimensions:            (time: 215)
+│       Coordinates:
+│         * time               (time) datetime64[ns] 2kB 2026-09-13T14:55:00 ... 2026...
+│       Data variables:
+│           dew_point          (time) float64 2kB ...
+│           precipitation      (time) float64 2kB ...
+│           pressure           (time) float64 2kB ...
+│           relative_humidity  (time) float64 2kB ...
+│           temperature        (time) float64 2kB ...
+│           visibility         (time) float64 2kB ...
+│           wind_direction     (time) float64 2kB ...
+│           wind_gust          (time) float64 2kB ...
+│           wind_speed         (time) float64 2kB ...
+│       Attributes:
+│           station:    BDU
+│           country:    US
+│           timezone:   America/Denver
+│           latitude:   40.0394
+│           longitude:  -105.2258
+│           elevation:  1612.0
+├── Group: /DEN
+│       Dimensions:            (time: 79)
+│       Coordinates:
+│         * time               (time) datetime64[ns] 632B 2026-09-13T14:53:00 ... 202...
+│       Data variables:
+│           dew_point          (time) float64 632B ...
+│           precipitation      (time) float64 632B ...
+│           pressure           (time) float64 632B ...
+│           relative_humidity  (time) float64 632B ...
+│           temperature        (time) float64 632B ...
+│           visibility         (time) float64 632B ...
+│           wind_direction     (time) float64 632B ...
+│           wind_gust          (time) float64 632B ...
+│           wind_speed         (time) float64 632B ...
+│       Attributes:
+│           station:    DEN
+│           country:    US
+│           timezone:   America/Denver
+│           latitude:   39.8328
+│           longitude:  -104.6575
+│           elevation:  1656.0
+└── Group: /DRO
+        Dimensions:            (time: 108)
+        Coordinates:
+          * time               (time) datetime64[ns] 864B 2026-09-13T14:53:00 ... 202...
+        Data variables:
+            dew_point          (time) float64 864B ...
+            precipitation      (time) float64 864B ...
+            pressure           (time) float64 864B ...
+            relative_humidity  (time) float64 864B ...
+            temperature        (time) float64 864B ...
+            visibility         (time) float64 864B ...
+            wind_direction     (time) float64 864B ...
+            wind_gust          (time) float64 864B ...
+            wind_speed         (time) float64 864B ...
+        Attributes:
+            station:    DRO
+            country:    US
+            timezone:   America/Denver
+            latitude:   37.1515
+            longitude:  -107.7538
+            elevation:  2038.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataTree</div></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-children'><div class='xr-group-box'><div class='xr-group-box-vline' style='height: 100%'></div><div class='xr-group-box-hline'></div><div class='xr-group-box-contents'><input id='group-c9e066c2-257c-47fd-ab59-cc31f519a4a0' type='checkbox' checked /><label for='group-c9e066c2-257c-47fd-ab59-cc31f519a4a0' title='Expand/collapse group'>/BDU<span>(16)</span></label><ul class='xr-sections'><li class='xr-section-item'><input id='section-b678e651-b825-4674-8108-c135d09f7146' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-b678e651-b825-4674-8108-c135d09f7146' class='xr-section-summary'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 215</li></ul></div></li><li class='xr-section-item'><input id='section-dd37df4c-31ef-419c-8353-47325c2b308e' class='xr-section-summary-in' type='checkbox' checked /><label for='section-dd37df4c-31ef-419c-8353-47325c2b308e' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2026-09-13T14:55:00 ... 2026-09-...</div><input id='attrs-be8c40f5-c69f-43a3-a8d1-d4bd80a5598b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-be8c40f5-c69f-43a3-a8d1-d4bd80a5598b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e73f9620-3f5c-480f-8313-3d43eaec7cf9' class='xr-var-data-in' type='checkbox'><label for='data-e73f9620-3f5c-480f-8313-3d43eaec7cf9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Timestamp of each ping</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2026-09-13T14:55:00.000000000&#x27;, &#x27;2026-09-13T15:15:00.000000000&#x27;,&#x27;2026-09-13T15:35:00.000000000&#x27;, ..., &#x27;2026-09-16T13:35:00.000000000&#x27;,&#x27;2026-09-16T13:55:00.000000000&#x27;, &#x27;2026-09-16T14:15:00.000000000&#x27;],shape=(215,), dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e34afcd4-c913-4fb5-83bd-5b60fab2f8f3' class='xr-section-summary-in' type='checkbox' checked /><label for='section-e34afcd4-c913-4fb5-83bd-5b60fab2f8f3' class='xr-section-summary' title='Expand/collapse section'>Data variables: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dew_point</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2f32d348-8926-4fee-8fbe-3d727644b89e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2f32d348-8926-4fee-8fbe-3d727644b89e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-743edc10-29f1-4f95-96c8-be3a35c5cf99' class='xr-var-data-in' type='checkbox'><label for='data-743edc10-29f1-4f95-96c8-be3a35c5cf99' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Dewpoint in Fahrenheit</dd><dt><span>standard_name :</span></dt><dd>Dewpoint</dd><dt><span>units :</span></dt><dd>degF</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>precipitation</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-36aecb83-61f7-490b-888e-9a7c24f99c5d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-36aecb83-61f7-490b-888e-9a7c24f99c5d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9eb3a511-90e5-4ae7-a10c-8ea039031919' class='xr-var-data-in' type='checkbox'><label for='data-9eb3a511-90e5-4ae7-a10c-8ea039031919' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>One Hour Precipitation in Inches</dd><dt><span>standard_name :</span></dt><dd>Precipitation</dd><dt><span>units :</span></dt><dd>inches</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pressure</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-22e1253f-5bab-4efb-b087-6e91581cbb0a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-22e1253f-5bab-4efb-b087-6e91581cbb0a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-80ab7853-0a09-4e70-b112-bd0e3a86bfbd' class='xr-var-data-in' type='checkbox'><label for='data-80ab7853-0a09-4e70-b112-bd0e3a86bfbd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Pressure in inHg</dd><dt><span>standard_name :</span></dt><dd>Pressure</dd><dt><span>units :</span></dt><dd>inHg</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>relative_humidity</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-65782061-145a-44af-8aeb-4fd0d4ea8217' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-65782061-145a-44af-8aeb-4fd0d4ea8217' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-927f3236-660b-4548-99ac-708398d389fd' class='xr-var-data-in' type='checkbox'><label for='data-927f3236-660b-4548-99ac-708398d389fd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Relative humidity in Percent</dd><dt><span>standard_name :</span></dt><dd>Relative Humidity</dd><dt><span>units :</span></dt><dd>percent</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>temperature</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-61807817-393a-4fab-a35b-e35845dc165a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-61807817-393a-4fab-a35b-e35845dc165a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-79f44241-e45f-41cd-b737-f80ea9fd92bf' class='xr-var-data-in' type='checkbox'><label for='data-79f44241-e45f-41cd-b737-f80ea9fd92bf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Temperature in Fahrenheit</dd><dt><span>standard_name :</span></dt><dd>Temperature</dd><dt><span>units :</span></dt><dd>degF</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>visibility</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-81381212-b224-4e7d-88e8-aff936ab7022' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-81381212-b224-4e7d-88e8-aff936ab7022' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7b012111-d541-4ce3-8329-5b60a1320eb5' class='xr-var-data-in' type='checkbox'><label for='data-7b012111-d541-4ce3-8329-5b60a1320eb5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Visibility in Miles</dd><dt><span>standard_name :</span></dt><dd>Visibility</dd><dt><span>units :</span></dt><dd>miles</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_direction</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-fdbb9491-8cc1-42f8-bac4-a2d1f20e10f7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fdbb9491-8cc1-42f8-bac4-a2d1f20e10f7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0b367291-7c3d-4609-b900-3d6721c04b10' class='xr-var-data-in' type='checkbox'><label for='data-0b367291-7c3d-4609-b900-3d6721c04b10' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Direction in Degrees</dd><dt><span>standard_name :</span></dt><dd>Wind Direction</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_gust</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d56cd81b-0d1c-456c-8f1a-34623ed5c15b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d56cd81b-0d1c-456c-8f1a-34623ed5c15b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8cd364ec-3ce5-4ad6-9a20-e971f0e84f72' class='xr-var-data-in' type='checkbox'><label for='data-8cd364ec-3ce5-4ad6-9a20-e971f0e84f72' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Gust in Knots</dd><dt><span>standard_name :</span></dt><dd>Wind Gust</dd><dt><span>units :</span></dt><dd>knots</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_speed</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e7d553fc-09f0-45e3-ae31-9667b29347ce' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e7d553fc-09f0-45e3-ae31-9667b29347ce' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-434981df-4778-4203-97e1-fb150744d05b' class='xr-var-data-in' type='checkbox'><label for='data-434981df-4778-4203-97e1-fb150744d05b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Speed in Knots</dd><dt><span>standard_name :</span></dt><dd>Wind Speed</dd><dt><span>units :</span></dt><dd>knots</dd></dl></div><div class='xr-var-data'><pre>[215 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ebf9588b-7e70-4252-ac1c-c01f9e34697c' class='xr-section-summary-in' type='checkbox' checked /><label for='section-ebf9588b-7e70-4252-ac1c-c01f9e34697c' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>station :</span></dt><dd>BDU</dd><dt><span>country :</span></dt><dd>US</dd><dt><span>timezone :</span></dt><dd>America/Denver</dd><dt><span>latitude :</span></dt><dd>40.0394</dd><dt><span>longitude :</span></dt><dd>-105.2258</dd><dt><span>elevation :</span></dt><dd>1612.0</dd></dl></div></li></ul></div></div><div class='xr-group-box'><div class='xr-group-box-vline' style='height: 100%'></div><div class='xr-group-box-hline'></div><div class='xr-group-box-contents'><input id='group-20c99bb6-c16c-456d-92a2-78b016b243f3' type='checkbox' checked /><label for='group-20c99bb6-c16c-456d-92a2-78b016b243f3' title='Expand/collapse group'>/DEN<span>(16)</span></label><ul class='xr-sections'><li class='xr-section-item'><input id='section-e6fc643f-5cf4-4546-a968-79fb3db88302' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-e6fc643f-5cf4-4546-a968-79fb3db88302' class='xr-section-summary'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 79</li></ul></div></li><li class='xr-section-item'><input id='section-2ecdef7a-f1b9-4bc1-9a22-42beb483d765' class='xr-section-summary-in' type='checkbox' checked /><label for='section-2ecdef7a-f1b9-4bc1-9a22-42beb483d765' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2026-09-13T14:53:00 ... 2026-09-...</div><input id='attrs-0cf89fe2-8dd4-4ad8-8acd-9a1b8684f034' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0cf89fe2-8dd4-4ad8-8acd-9a1b8684f034' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a73683b1-78b4-40c3-9641-7c118039750d' class='xr-var-data-in' type='checkbox'><label for='data-a73683b1-78b4-40c3-9641-7c118039750d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Timestamp of each ping</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2026-09-13T14:53:00.000000000&#x27;, &#x27;2026-09-13T15:53:00.000000000&#x27;,&#x27;2026-09-13T16:53:00.000000000&#x27;, &#x27;2026-09-13T17:53:00.000000000&#x27;,&#x27;2026-09-13T18:53:00.000000000&#x27;, &#x27;2026-09-13T19:53:00.000000000&#x27;,&#x27;2026-09-13T20:53:00.000000000&#x27;, &#x27;2026-09-13T21:53:00.000000000&#x27;,&#x27;2026-09-13T22:53:00.000000000&#x27;, &#x27;2026-09-13T23:53:00.000000000&#x27;,&#x27;2026-09-14T00:53:00.000000000&#x27;, &#x27;2026-09-14T01:53:00.000000000&#x27;,&#x27;2026-09-14T02:53:00.000000000&#x27;, &#x27;2026-09-14T03:53:00.000000000&#x27;,&#x27;2026-09-14T04:40:00.000000000&#x27;, &#x27;2026-09-14T04:53:00.000000000&#x27;,&#x27;2026-09-14T05:53:00.000000000&#x27;, &#x27;2026-09-14T06:53:00.000000000&#x27;,&#x27;2026-09-14T07:53:00.000000000&#x27;, &#x27;2026-09-14T08:53:00.000000000&#x27;,&#x27;2026-09-14T09:01:00.000000000&#x27;, &#x27;2026-09-14T09:36:00.000000000&#x27;,&#x27;2026-09-14T09:53:00.000000000&#x27;, &#x27;2026-09-14T10:53:00.000000000&#x27;,&#x27;2026-09-14T11:53:00.000000000&#x27;, &#x27;2026-09-14T12:53:00.000000000&#x27;,&#x27;2026-09-14T13:53:00.000000000&#x27;, &#x27;2026-09-14T14:53:00.000000000&#x27;,&#x27;2026-09-14T15:53:00.000000000&#x27;, &#x27;2026-09-14T16:53:00.000000000&#x27;,&#x27;2026-09-14T17:53:00.000000000&#x27;, &#x27;2026-09-14T18:53:00.000000000&#x27;,&#x27;2026-09-14T19:53:00.000000000&#x27;, &#x27;2026-09-14T20:53:00.000000000&#x27;,&#x27;2026-09-14T21:53:00.000000000&#x27;, &#x27;2026-09-14T22:53:00.000000000&#x27;,&#x27;2026-09-14T23:35:00.000000000&#x27;, &#x27;2026-09-14T23:42:00.000000000&#x27;,&#x27;2026-09-14T23:53:00.000000000&#x27;, &#x27;2026-09-15T00:53:00.000000000&#x27;,&#x27;2026-09-15T01:53:00.000000000&#x27;, &#x27;2026-09-15T02:53:00.000000000&#x27;,&#x27;2026-09-15T03:53:00.000000000&#x27;, &#x27;2026-09-15T04:53:00.000000000&#x27;,&#x27;2026-09-15T05:53:00.000000000&#x27;, &#x27;2026-09-15T06:53:00.000000000&#x27;,&#x27;2026-09-15T07:53:00.000000000&#x27;, &#x27;2026-09-15T08:35:00.000000000&#x27;,&#x27;2026-09-15T08:53:00.000000000&#x27;, &#x27;2026-09-15T09:53:00.000000000&#x27;,&#x27;2026-09-15T10:53:00.000000000&#x27;, &#x27;2026-09-15T11:53:00.000000000&#x27;,&#x27;2026-09-15T12:53:00.000000000&#x27;, &#x27;2026-09-15T13:53:00.000000000&#x27;,&#x27;2026-09-15T14:53:00.000000000&#x27;, &#x27;2026-09-15T15:53:00.000000000&#x27;,&#x27;2026-09-15T16:53:00.000000000&#x27;, &#x27;2026-09-15T17:25:00.000000000&#x27;,&#x27;2026-09-15T17:53:00.000000000&#x27;, &#x27;2026-09-15T18:53:00.000000000&#x27;,&#x27;2026-09-15T19:53:00.000000000&#x27;, &#x27;2026-09-15T20:53:00.000000000&#x27;,&#x27;2026-09-15T21:53:00.000000000&#x27;, &#x27;2026-09-15T22:53:00.000000000&#x27;,&#x27;2026-09-15T23:53:00.000000000&#x27;, &#x27;2026-09-16T00:53:00.000000000&#x27;,&#x27;2026-09-16T01:53:00.000000000&#x27;, &#x27;2026-09-16T02:53:00.000000000&#x27;,&#x27;2026-09-16T03:53:00.000000000&#x27;, &#x27;2026-09-16T04:53:00.000000000&#x27;,&#x27;2026-09-16T05:53:00.000000000&#x27;, &#x27;2026-09-16T06:53:00.000000000&#x27;,&#x27;2026-09-16T07:53:00.000000000&#x27;, &#x27;2026-09-16T08:53:00.000000000&#x27;,&#x27;2026-09-16T09:53:00.000000000&#x27;, &#x27;2026-09-16T10:53:00.000000000&#x27;,&#x27;2026-09-16T11:53:00.000000000&#x27;, &#x27;2026-09-16T12:53:00.000000000&#x27;,&#x27;2026-09-16T13:53:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-81a8ab0b-a6c8-48d9-92e3-948359bdcf64' class='xr-section-summary-in' type='checkbox' checked /><label for='section-81a8ab0b-a6c8-48d9-92e3-948359bdcf64' class='xr-section-summary' title='Expand/collapse section'>Data variables: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dew_point</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e8ebe8d4-235d-4e2c-89b5-2cabdf8dfb40' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e8ebe8d4-235d-4e2c-89b5-2cabdf8dfb40' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-93337c29-35bf-4be7-9e59-f1b52b95ac37' class='xr-var-data-in' type='checkbox'><label for='data-93337c29-35bf-4be7-9e59-f1b52b95ac37' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Dewpoint in Fahrenheit</dd><dt><span>standard_name :</span></dt><dd>Dewpoint</dd><dt><span>units :</span></dt><dd>degF</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>precipitation</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-547c52d0-fbd9-4616-8cbc-2c08a660a01b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-547c52d0-fbd9-4616-8cbc-2c08a660a01b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d18a6321-6457-443a-93b6-00ed9acf7ac3' class='xr-var-data-in' type='checkbox'><label for='data-d18a6321-6457-443a-93b6-00ed9acf7ac3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>One Hour Precipitation in Inches</dd><dt><span>standard_name :</span></dt><dd>Precipitation</dd><dt><span>units :</span></dt><dd>inches</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pressure</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1b3151fd-bae5-46f6-ae08-e745cce9a9c0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1b3151fd-bae5-46f6-ae08-e745cce9a9c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-27e47f08-ba3b-4f60-bd73-28b73a33b141' class='xr-var-data-in' type='checkbox'><label for='data-27e47f08-ba3b-4f60-bd73-28b73a33b141' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Pressure in inHg</dd><dt><span>standard_name :</span></dt><dd>Pressure</dd><dt><span>units :</span></dt><dd>inHg</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>relative_humidity</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-172d16aa-7473-467e-b444-664d5964004c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-172d16aa-7473-467e-b444-664d5964004c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-11b8c18b-8911-4cd5-b33b-c144e38f4897' class='xr-var-data-in' type='checkbox'><label for='data-11b8c18b-8911-4cd5-b33b-c144e38f4897' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Relative humidity in Percent</dd><dt><span>standard_name :</span></dt><dd>Relative Humidity</dd><dt><span>units :</span></dt><dd>percent</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>temperature</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c0e11193-422f-4f87-b744-ca8ca4c65843' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c0e11193-422f-4f87-b744-ca8ca4c65843' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4eb910b7-1ee5-4167-af31-145a9dc7bf58' class='xr-var-data-in' type='checkbox'><label for='data-4eb910b7-1ee5-4167-af31-145a9dc7bf58' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Temperature in Fahrenheit</dd><dt><span>standard_name :</span></dt><dd>Temperature</dd><dt><span>units :</span></dt><dd>degF</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>visibility</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7c6b3445-a82b-4881-8b09-7048a33a3ce6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7c6b3445-a82b-4881-8b09-7048a33a3ce6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1eef80f0-96f2-4d1d-bddf-f875edfd7c41' class='xr-var-data-in' type='checkbox'><label for='data-1eef80f0-96f2-4d1d-bddf-f875edfd7c41' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Visibility in Miles</dd><dt><span>standard_name :</span></dt><dd>Visibility</dd><dt><span>units :</span></dt><dd>miles</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_direction</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-19c97a19-9d53-4a81-a4c4-a3b5dc1a82b1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-19c97a19-9d53-4a81-a4c4-a3b5dc1a82b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7bdf96ff-c20f-4881-8790-4752215e238d' class='xr-var-data-in' type='checkbox'><label for='data-7bdf96ff-c20f-4881-8790-4752215e238d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Direction in Degrees</dd><dt><span>standard_name :</span></dt><dd>Wind Direction</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_gust</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2d60f825-68c4-4168-8cc8-306444933fc0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2d60f825-68c4-4168-8cc8-306444933fc0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3973d7f6-8c30-44cc-bae4-94dfed38dcb8' class='xr-var-data-in' type='checkbox'><label for='data-3973d7f6-8c30-44cc-bae4-94dfed38dcb8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Gust in Knots</dd><dt><span>standard_name :</span></dt><dd>Wind Gust</dd><dt><span>units :</span></dt><dd>knots</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_speed</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2dbe6f3f-972d-4b87-ad0b-8ecbc1234af7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2dbe6f3f-972d-4b87-ad0b-8ecbc1234af7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-62fb2f5f-d0a5-4f53-8c09-6cce553fb84f' class='xr-var-data-in' type='checkbox'><label for='data-62fb2f5f-d0a5-4f53-8c09-6cce553fb84f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Speed in Knots</dd><dt><span>standard_name :</span></dt><dd>Wind Speed</dd><dt><span>units :</span></dt><dd>knots</dd></dl></div><div class='xr-var-data'><pre>[79 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3ac8d24a-e8ec-4ca2-989f-db7d618db1e9' class='xr-section-summary-in' type='checkbox' checked /><label for='section-3ac8d24a-e8ec-4ca2-989f-db7d618db1e9' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>station :</span></dt><dd>DEN</dd><dt><span>country :</span></dt><dd>US</dd><dt><span>timezone :</span></dt><dd>America/Denver</dd><dt><span>latitude :</span></dt><dd>39.8328</dd><dt><span>longitude :</span></dt><dd>-104.6575</dd><dt><span>elevation :</span></dt><dd>1656.0</dd></dl></div></li></ul></div></div><div class='xr-group-box'><div class='xr-group-box-vline' style='height: 1.2em'></div><div class='xr-group-box-hline'></div><div class='xr-group-box-contents'><input id='group-f0683e99-f449-4a80-a930-39e2019eaece' type='checkbox' checked /><label for='group-f0683e99-f449-4a80-a930-39e2019eaece' title='Expand/collapse group'>/DRO<span>(16)</span></label><ul class='xr-sections'><li class='xr-section-item'><input id='section-6a221ea1-8035-4312-a005-50581a971774' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-6a221ea1-8035-4312-a005-50581a971774' class='xr-section-summary'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 108</li></ul></div></li><li class='xr-section-item'><input id='section-3a0fc624-da0e-4fc9-8d21-42d4753662fc' class='xr-section-summary-in' type='checkbox' checked /><label for='section-3a0fc624-da0e-4fc9-8d21-42d4753662fc' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2026-09-13T14:53:00 ... 2026-09-...</div><input id='attrs-a8c7ef8f-c7d7-4dac-a1c7-cb57307efb91' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a8c7ef8f-c7d7-4dac-a1c7-cb57307efb91' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1ecb0ea4-95cd-4e44-a873-c22e70f4027c' class='xr-var-data-in' type='checkbox'><label for='data-1ecb0ea4-95cd-4e44-a873-c22e70f4027c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Timestamp of each ping</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2026-09-13T14:53:00.000000000&#x27;, &#x27;2026-09-13T15:53:00.000000000&#x27;,&#x27;2026-09-13T16:53:00.000000000&#x27;, &#x27;2026-09-13T17:53:00.000000000&#x27;,&#x27;2026-09-13T18:53:00.000000000&#x27;, &#x27;2026-09-13T19:53:00.000000000&#x27;,&#x27;2026-09-13T20:53:00.000000000&#x27;, &#x27;2026-09-13T21:53:00.000000000&#x27;,&#x27;2026-09-13T22:53:00.000000000&#x27;, &#x27;2026-09-13T23:53:00.000000000&#x27;,&#x27;2026-09-14T00:53:00.000000000&#x27;, &#x27;2026-09-14T01:53:00.000000000&#x27;,&#x27;2026-09-14T02:53:00.000000000&#x27;, &#x27;2026-09-14T03:42:00.000000000&#x27;,&#x27;2026-09-14T03:53:00.000000000&#x27;, &#x27;2026-09-14T04:34:00.000000000&#x27;,&#x27;2026-09-14T04:53:00.000000000&#x27;, &#x27;2026-09-14T05:53:00.000000000&#x27;,&#x27;2026-09-14T06:53:00.000000000&#x27;, &#x27;2026-09-14T07:53:00.000000000&#x27;,&#x27;2026-09-14T08:53:00.000000000&#x27;, &#x27;2026-09-14T09:53:00.000000000&#x27;,&#x27;2026-09-14T10:53:00.000000000&#x27;, &#x27;2026-09-14T11:53:00.000000000&#x27;,&#x27;2026-09-14T12:53:00.000000000&#x27;, &#x27;2026-09-14T13:53:00.000000000&#x27;,&#x27;2026-09-14T14:53:00.000000000&#x27;, &#x27;2026-09-14T15:53:00.000000000&#x27;,&#x27;2026-09-14T16:53:00.000000000&#x27;, &#x27;2026-09-14T17:53:00.000000000&#x27;,&#x27;2026-09-14T18:23:00.000000000&#x27;, &#x27;2026-09-14T18:48:00.000000000&#x27;,&#x27;2026-09-14T18:53:00.000000000&#x27;, &#x27;2026-09-14T19:28:00.000000000&#x27;,&#x27;2026-09-14T19:36:00.000000000&#x27;, &#x27;2026-09-14T19:53:00.000000000&#x27;,&#x27;2026-09-14T20:36:00.000000000&#x27;, &#x27;2026-09-14T20:53:00.000000000&#x27;,&#x27;2026-09-14T21:09:00.000000000&#x27;, &#x27;2026-09-14T21:17:00.000000000&#x27;,&#x27;2026-09-14T21:47:00.000000000&#x27;, &#x27;2026-09-14T21:53:00.000000000&#x27;,&#x27;2026-09-14T21:57:00.000000000&#x27;, &#x27;2026-09-14T22:04:00.000000000&#x27;,&#x27;2026-09-14T22:43:00.000000000&#x27;, &#x27;2026-09-14T22:49:00.000000000&#x27;,&#x27;2026-09-14T22:53:00.000000000&#x27;, &#x27;2026-09-14T23:02:00.000000000&#x27;,&#x27;2026-09-14T23:21:00.000000000&#x27;, &#x27;2026-09-14T23:29:00.000000000&#x27;,&#x27;2026-09-14T23:38:00.000000000&#x27;, &#x27;2026-09-14T23:45:00.000000000&#x27;,&#x27;2026-09-14T23:53:00.000000000&#x27;, &#x27;2026-09-15T00:14:00.000000000&#x27;,&#x27;2026-09-15T00:53:00.000000000&#x27;, &#x27;2026-09-15T01:05:00.000000000&#x27;,&#x27;2026-09-15T01:13:00.000000000&#x27;, &#x27;2026-09-15T01:32:00.000000000&#x27;,&#x27;2026-09-15T01:39:00.000000000&#x27;, &#x27;2026-09-15T01:53:00.000000000&#x27;,&#x27;2026-09-15T02:53:00.000000000&#x27;, &#x27;2026-09-15T03:53:00.000000000&#x27;,&#x27;2026-09-15T04:53:00.000000000&#x27;, &#x27;2026-09-15T05:53:00.000000000&#x27;,&#x27;2026-09-15T06:53:00.000000000&#x27;, &#x27;2026-09-15T07:53:00.000000000&#x27;,&#x27;2026-09-15T08:53:00.000000000&#x27;, &#x27;2026-09-15T09:35:00.000000000&#x27;,&#x27;2026-09-15T09:51:00.000000000&#x27;, &#x27;2026-09-15T09:53:00.000000000&#x27;,&#x27;2026-09-15T09:57:00.000000000&#x27;, &#x27;2026-09-15T10:06:00.000000000&#x27;,&#x27;2026-09-15T10:29:00.000000000&#x27;, &#x27;2026-09-15T10:40:00.000000000&#x27;,&#x27;2026-09-15T10:53:00.000000000&#x27;, &#x27;2026-09-15T11:53:00.000000000&#x27;,&#x27;2026-09-15T12:53:00.000000000&#x27;, &#x27;2026-09-15T13:53:00.000000000&#x27;,&#x27;2026-09-15T14:53:00.000000000&#x27;, &#x27;2026-09-15T15:53:00.000000000&#x27;,&#x27;2026-09-15T16:53:00.000000000&#x27;, &#x27;2026-09-15T17:53:00.000000000&#x27;,&#x27;2026-09-15T18:53:00.000000000&#x27;, &#x27;2026-09-15T19:53:00.000000000&#x27;,&#x27;2026-09-15T20:53:00.000000000&#x27;, &#x27;2026-09-15T21:53:00.000000000&#x27;,&#x27;2026-09-15T22:53:00.000000000&#x27;, &#x27;2026-09-15T23:53:00.000000000&#x27;,&#x27;2026-09-16T00:53:00.000000000&#x27;, &#x27;2026-09-16T01:29:00.000000000&#x27;,&#x27;2026-09-16T01:45:00.000000000&#x27;, &#x27;2026-09-16T01:53:00.000000000&#x27;,&#x27;2026-09-16T02:06:00.000000000&#x27;, &#x27;2026-09-16T02:25:00.000000000&#x27;,&#x27;2026-09-16T02:53:00.000000000&#x27;, &#x27;2026-09-16T03:53:00.000000000&#x27;,&#x27;2026-09-16T04:12:00.000000000&#x27;, &#x27;2026-09-16T04:33:00.000000000&#x27;,&#x27;2026-09-16T04:53:00.000000000&#x27;, &#x27;2026-09-16T05:53:00.000000000&#x27;,&#x27;2026-09-16T06:53:00.000000000&#x27;, &#x27;2026-09-16T07:53:00.000000000&#x27;,&#x27;2026-09-16T08:53:00.000000000&#x27;, &#x27;2026-09-16T09:53:00.000000000&#x27;,&#x27;2026-09-16T10:53:00.000000000&#x27;, &#x27;2026-09-16T11:53:00.000000000&#x27;,&#x27;2026-09-16T12:53:00.000000000&#x27;, &#x27;2026-09-16T13:53:00.000000000&#x27;],dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-75ab5ff3-ae6b-413d-a465-faa389fda8b3' class='xr-section-summary-in' type='checkbox' checked /><label for='section-75ab5ff3-ae6b-413d-a465-faa389fda8b3' class='xr-section-summary' title='Expand/collapse section'>Data variables: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dew_point</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7795f88e-1d15-43a2-8afa-907051272491' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7795f88e-1d15-43a2-8afa-907051272491' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-24aaa711-b6b6-40a5-b0c4-ae6daf595fe0' class='xr-var-data-in' type='checkbox'><label for='data-24aaa711-b6b6-40a5-b0c4-ae6daf595fe0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Dewpoint in Fahrenheit</dd><dt><span>standard_name :</span></dt><dd>Dewpoint</dd><dt><span>units :</span></dt><dd>degF</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>precipitation</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d473ad91-0b82-485f-89a4-7e2326854e97' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d473ad91-0b82-485f-89a4-7e2326854e97' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-74fbfb87-9b08-41c5-8fef-d199d9a5fe4e' class='xr-var-data-in' type='checkbox'><label for='data-74fbfb87-9b08-41c5-8fef-d199d9a5fe4e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>One Hour Precipitation in Inches</dd><dt><span>standard_name :</span></dt><dd>Precipitation</dd><dt><span>units :</span></dt><dd>inches</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pressure</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a7a4201e-014e-4ddf-b522-3707f7dab936' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a7a4201e-014e-4ddf-b522-3707f7dab936' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9d560878-efcf-4a4d-868c-ac07d7ff4da7' class='xr-var-data-in' type='checkbox'><label for='data-9d560878-efcf-4a4d-868c-ac07d7ff4da7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Pressure in inHg</dd><dt><span>standard_name :</span></dt><dd>Pressure</dd><dt><span>units :</span></dt><dd>inHg</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>relative_humidity</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c0c14d95-c2ae-4662-90a2-3259eb220640' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c0c14d95-c2ae-4662-90a2-3259eb220640' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3541e721-73e0-48ea-8a87-140dce67b277' class='xr-var-data-in' type='checkbox'><label for='data-3541e721-73e0-48ea-8a87-140dce67b277' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Relative humidity in Percent</dd><dt><span>standard_name :</span></dt><dd>Relative Humidity</dd><dt><span>units :</span></dt><dd>percent</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>temperature</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8fcf1bb5-ce36-4214-bb9a-dbbad651d8da' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8fcf1bb5-ce36-4214-bb9a-dbbad651d8da' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-54680b40-9d43-4285-b69e-909d2f99a351' class='xr-var-data-in' type='checkbox'><label for='data-54680b40-9d43-4285-b69e-909d2f99a351' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Temperature in Fahrenheit</dd><dt><span>standard_name :</span></dt><dd>Temperature</dd><dt><span>units :</span></dt><dd>degF</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>visibility</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d7426010-da15-4421-a9f3-d6e079fe3052' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d7426010-da15-4421-a9f3-d6e079fe3052' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-851f4136-56a2-4fe1-b84e-712e5310bef1' class='xr-var-data-in' type='checkbox'><label for='data-851f4136-56a2-4fe1-b84e-712e5310bef1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Visibility in Miles</dd><dt><span>standard_name :</span></dt><dd>Visibility</dd><dt><span>units :</span></dt><dd>miles</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_direction</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-0dcacc5c-0ddc-4fe8-a817-b5d3a9f85734' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0dcacc5c-0ddc-4fe8-a817-b5d3a9f85734' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8122ffd9-d0b9-4855-8c2a-c3f3fdd90bcb' class='xr-var-data-in' type='checkbox'><label for='data-8122ffd9-d0b9-4855-8c2a-c3f3fdd90bcb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Direction in Degrees</dd><dt><span>standard_name :</span></dt><dd>Wind Direction</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_gust</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-b7e52e13-677d-4d37-aaad-c91ac44ff7c5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b7e52e13-677d-4d37-aaad-c91ac44ff7c5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8354f455-b7f1-4126-9d35-1dcb52499da2' class='xr-var-data-in' type='checkbox'><label for='data-8354f455-b7f1-4126-9d35-1dcb52499da2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Gust in Knots</dd><dt><span>standard_name :</span></dt><dd>Wind Gust</dd><dt><span>units :</span></dt><dd>knots</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_speed</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4a6f89ab-8063-4d78-9b72-c0d09d4bdd8f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4a6f89ab-8063-4d78-9b72-c0d09d4bdd8f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5f31c85d-ed35-4a80-9af5-198adee26415' class='xr-var-data-in' type='checkbox'><label for='data-5f31c85d-ed35-4a80-9af5-198adee26415' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind Speed in Knots</dd><dt><span>standard_name :</span></dt><dd>Wind Speed</dd><dt><span>units :</span></dt><dd>knots</dd></dl></div><div class='xr-var-data'><pre>[108 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4b5afa26-5b7a-4172-80b8-bb097357814c' class='xr-section-summary-in' type='checkbox' checked /><label for='section-4b5afa26-5b7a-4172-80b8-bb097357814c' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>station :</span></dt><dd>DRO</dd><dt><span>country :</span></dt><dd>US</dd><dt><span>timezone :</span></dt><dd>America/Denver</dd><dt><span>latitude :</span></dt><dd>37.1515</dd><dt><span>longitude :</span></dt><dd>-107.7538</dd><dt><span>elevation :</span></dt><dd>2038.0</dd></dl></div></li></ul></div></div></div></li></ul></div></div>
