@@ -1,4 +1,4 @@
-name: METAR-archive-cookbook
+name: METAR_archive-cookbook
 channels:
   - conda-forge
 dependencies:
