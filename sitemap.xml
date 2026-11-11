@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="http://localhost:3000/sitemap_style.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="http://pre.render/sitemap_style.xsl" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000</loc>
+    <loc>http://pre.render</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/how-to-cite</loc>
+    <loc>http://pre.render/notebooks/how-to-cite</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/primer</loc>
+    <loc>http://pre.render/notebooks/primer</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/metpy-metar-map</loc>
+    <loc>http://pre.render/notebooks/metpy-metar-map</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/geopandas-visualization</loc>
+    <loc>http://pre.render/notebooks/geopandas-visualization</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/lonboard-visualization</loc>
+    <loc>http://pre.render/notebooks/lonboard-visualization</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/local-statistics</loc>
+    <loc>http://pre.render/notebooks/local-statistics</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/reanalysis-comparison</loc>
+    <loc>http://pre.render/notebooks/reanalysis-comparison</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/dataset-restructuring</loc>
+    <loc>http://pre.render/notebooks/dataset-restructuring</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/ai-assistant</loc>
+    <loc>http://pre.render/notebooks/ai-assistant</loc>
   </url>
 </urlset>
